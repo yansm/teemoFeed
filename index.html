@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>teemoApp</title>
+		<meta charset="utf-8">
+		<meta id="Viewport" name="viewport" content="width=device-width">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<script>
+			var ww, ww2; //get proper width
+			if (window.innerWidth)
+				ww = window.innerWidth;
+			else if ((document.body) && (document.body.clientWidth))
+				ww = document.body.clientWidth;
+			if (document.documentElement && document.documentElement.clientHeight && document.documentElement.clientWidth)
+			{
+				ww2 = document.documentElement.clientWidth;
+			}
+			ww = !!ww2&&ww2<ww ? ww2 : ww;
+			var mw = 750; // min width of site 
+			var ratio =  ww / mw; //calculate ratio
+			//if( ww < mw){ //smaller than minimum size
+				document.getElementById('Viewport').setAttribute('content', 'initial-scale=' + ratio + ', maximum-scale=' + ratio + ', minimum-scale=' + ratio + ', user-scalable=yes, width=' + mw);
+			//}else{ //regular size
+				//document.getElementById('Viewport').setAttribute('content', 'initial-scale=1.0, maximum-scale=2, minimum-scale=1.0, user-scalable=yes, width=' + mw);
+			//}
+			
+		</script>
+		<link rel="stylesheet" href="./styles/app.min.css"></link>
+		
+	</head>
+	<body>	
+		<div class="index-box">
+			<a class="index-btn"></a> 
+			<div class="container">
+				<div class="index-intro  index-content" style="margin-top: 180px;  ">
+					<ul>
+						<li class="index-intro-item index-intro-item1">发布一张或多张家人的照片，要体现 #一看就是家人# 的主题。照片中至少包含孩子、爸妈、老人中的2位。</li>
+						<li class="line"></li>
+						<li class="index-intro-item index-intro-item2">在发布照片时，输入文字<span class="index-intro-b">#一看就是一家人#。</span></li>
+						<li class="line"></li>
+						<li class="index-intro-item index-intro-item3">照片发布后，要获得<span class="index-intro-b">至少两位</span>家长的赞。</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="index-title index-title1" ></div>
+		<div class="container">
+			
+			<div class="index-content" data-toggle="feeds" data-type="main">
+				<a class="btn" href="feeds.html">更多家庭</a>
+			</div>
+		</div>
+		<div class="index-title index-title2" ></div>
+		<div class="container">
+			<div class="index-intro  index-content">
+				<ul>
+					<li class="index-intro-item index-intro-item4">活动自2015年12月12日开始,13日晚22:00结束,  并于14日早10:00公布获奖名单。</li>
+					<li class="index-intro-item index-intro-item4">系统首先会筛选出符合要求的照片，然后从中选出5位金猫奖、10位银猫奖、15位铜猫奖。</li>
+					<li class="index-intro-item index-intro-item4">获奖名单公布后，微信@糖小猫会联系获奖用户，安排奖品发放事宜。</li>
+				</ul>
+			</div>
+		</div>
+		<div class="copyright">特别声明: 本活动与Apple.Inc无关</div>
+	</body>
+	<script src="./lib/bundle.min.js"></script>	
+</html>
