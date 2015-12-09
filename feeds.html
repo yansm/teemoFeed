@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>teemoApp</title>
+		<meta charset="utf-8">
+		<meta id="Viewport" name="viewport" content="width=device-width">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<script>
+			var ww, ww2; //get proper width
+			if (window.innerWidth)
+				ww = window.innerWidth;
+			else if ((document.body) && (document.body.clientWidth))
+				ww = document.body.clientWidth;
+			if (document.documentElement && document.documentElement.clientHeight && document.documentElement.clientWidth)
+			{
+				ww2 = document.documentElement.clientWidth;
+			}
+			ww = !!ww2&&ww2<ww ? ww2 : ww;
+			var mw = 750; // min width of site 
+			var ratio =  ww / mw; //calculate ratio
+			//if( ww < mw){ //smaller than minimum size
+				document.getElementById('Viewport').setAttribute('content', 'initial-scale=' + ratio + ', maximum-scale=' + ratio + ', minimum-scale=' + ratio + ', user-scalable=yes, width=' + mw);
+			//}else{ //regular size
+				//document.getElementById('Viewport').setAttribute('content', 'initial-scale=1.0, maximum-scale=2, minimum-scale=1.0, user-scalable=yes, width=' + mw);
+			//}
+			
+		</script>
+		<link rel="stylesheet" href="./styles/app.min.css"></link>
+		
+	</head>
+	<body>	
+		
+		<div class="container" style="margin-top: 40px;">
+			
+			<div class="index-content">
+				<div data-toggle="feeds" data-type="list">
+					
+				</div>
+			<div class="toolbar">
+				<div class="toolbar-loaded"></div>
+				<div class="toolbar-loading">更新中···</div>
+				<div class="toolbar-end">到底了</div>
+			</div>
+			</div>
+		</div>
+		
+		<div class="copyright">特别声明: 本活动与Apple.Inc无关</div>
+	</body>
+	<script src="./lib/bundle.min.js"></script>	
+</html>
